@@ -1,5 +1,7 @@
 # Verilog Project
 
-#01 8x8 Multiplier (radix 4 booth algorithm)
+- 8x8 Multiplier (radix 4 booth algorithm)
 
-#02 8x8 Multiplier (radix 4 booth algorithm)_tb
+- 8x8 Multiplier (radix 4 booth algorithm)_tb
+
+- Verilog Elevator System
