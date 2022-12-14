@@ -4,4 +4,4 @@
 
 - 8x8 Multiplier (radix 4 booth algorithm)_tb
 
-- Verilog Elevator System (Used 7segment + Motor)
+- Elevator System (Used 7segment + Motor)
