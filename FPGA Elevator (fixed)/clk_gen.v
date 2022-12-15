@@ -14,7 +14,7 @@ always @ (posedge clk100m) begin
 end
 
 always @ (posedge clk100m) begin
-    if(cnt_clk100m >= count_target10k)  clk10k <= ~clk10k;
+    if(cnt_clk100m >= count_target10k)  clk10k <= ~clk10k;  //generate 10kHz clock by counter
 end
 
 endmodule
