@@ -36,8 +36,8 @@ module step_motor(
                 else                        count   <=  count + 1;
                 case (count)
                     0: begin
-                        if(sw_dir)  motor_out <= 4'b1001;
-                        else        motor_out <= 4'b1100;
+                        if(sw_dir)  motor_out <= 4'b1001;   //sw_dir == 1 --> right rotation
+                        else        motor_out <= 4'b1100;   //sw_dir == 0 --> left rotation
                     end
                     500000: begin
                         if(sw_dir)  motor_out <= 4'b1100;
