@@ -41,7 +41,7 @@ always @ (posedge clk) begin
                     real_motor_onoff    <=  0;
                     real_motor_dir      <=  0;  
                 end              
-                else begin
+                else begin  //during moving time, motor should operate
                     real_motor_onoff    <=  1;
                     real_motor_dir      <=  0;                      
                 end
@@ -51,7 +51,7 @@ always @ (posedge clk) begin
                     real_motor_onoff    <=  0;
                     real_motor_dir      <=  0;  
                 end              
-                else begin
+                else begin  //during moving time, motor should operate in opposite direction compared with state_going_to_1
                     real_motor_onoff    <=  1;
                     real_motor_dir      <=  1;                      
                 end
