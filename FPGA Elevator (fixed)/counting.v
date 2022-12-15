@@ -23,10 +23,10 @@ always @ (posedge clk) begin
     if(rst) cnt_clk <= 16'd50000;
     else begin
         case(state)
-            state_idle: cnt_clk <= 16'd50000;
+            state_idle: cnt_clk <= 16'd50000;   //clk: 10kHz --> counting 50000 == 5 seconds
             state_floor1: begin
-                if(btn_stable_shot[2] | btn_stable_shot[1]) cnt_clk <= 16'd50000;
-                else if(cnt_clk == 0)                       cnt_clk <= 16'd0;
+                if(btn_stable_shot[2] | btn_stable_shot[1]) cnt_clk <= 16'd50000;   //btn2 --> extend counter by initializing max value
+                else if(cnt_clk == 0)                       cnt_clk <= 16'd0;       //btn1 --> state transition --> initialize 50000
                 else                                        cnt_clk <= cnt_clk - 1;
             end
             state_floor2: begin
@@ -48,7 +48,7 @@ always @ (posedge clk) begin
 end
 
 always @ (*) begin
-    if(cnt_clk > 40000)         counting_value  =   3'd5;
+    if(cnt_clk > 40000)         counting_value  =   3'd5;   // for segment
     else if(cnt_clk > 30000)    counting_value  =   3'd4;
     else if(cnt_clk > 20000)    counting_value  =   3'd3;
     else if(cnt_clk > 10000)    counting_value  =   3'd2;
