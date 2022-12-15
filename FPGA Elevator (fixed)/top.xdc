@@ -49,3 +49,6 @@ set_property IOSTANDARD LVCMOS18 [get_ports {test_led[3]}]
 set_property IOSTANDARD LVCMOS18 [get_ports {test_led[2]}]
 set_property IOSTANDARD LVCMOS18 [get_ports {test_led[1]}]
 set_property IOSTANDARD LVCMOS18 [get_ports {test_led[0]}]
+
+set_property PACKAGE_PIN F7 [get_ports reset]
+set_property IOSTANDARD LVCMOS18 [get_ports reset]
