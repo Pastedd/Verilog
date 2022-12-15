@@ -82,3 +82,5 @@ always @ (*) begin
         default:    fnd_data    =   seg7_print_nothing;
     endcase
 end
+
+endmodule
